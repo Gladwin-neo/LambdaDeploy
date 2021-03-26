@@ -35,7 +35,7 @@ Resources:
         getAZsAPI:
           Type: Api
           Properties:
-            Path: /getazs
+            Path: /getazzs
             Method: get
       Environment:
         Variables:
