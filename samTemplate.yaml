@@ -2,6 +2,12 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
 Description: CD Demo Lambda
 Resources:
+  BasicAWSApiGateway:
+    Type: AWS::Serverless::Api
+    Properties:
+      Name: Basic AWS Api Gateway
+      StageName: Staging
+
   CDDemoLambda:
     Type: 'AWS::Serverless::Function'
     Properties:
@@ -13,12 +19,12 @@ Resources:
       Timeout: 30
       Role: 'arn:aws:iam::148484133023:role/MyLambdaRole'
       Events:
-        MyTimeApi:
+        CDDemoApi:
           Type: Api
           Properties:
-            Path: /TextResource
+            RestApiId: !Ref BasicAWSApiGateway
+            Path: /hello
             Method: GET
-            RestApiId: zsxwfpway9
   CDDemoLambda2:
     Type: 'AWS::Serverless::Function'
     Properties:
