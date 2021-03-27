@@ -5,7 +5,7 @@ Resources:
   BasicAWSApiGateway:
     Type: AWS::Serverless::Api
     Properties:
-      Name: Basic AWS Api Gateway
+      Name: LoyaltyProgramDetailsApi
       StageName: Staging
 
   CDDemoLambda:
