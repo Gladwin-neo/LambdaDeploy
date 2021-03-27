@@ -5,7 +5,7 @@ Resources:
   LoyaltyProgramDetailsApi:
     Type: AWS::Serverless::Api
     Properties:
-      Name: Loyalty Program Details Api
+      Name: LoyaltyProgramDetailsApi
       StageName: Staging
 
   CDDemoLambda:
