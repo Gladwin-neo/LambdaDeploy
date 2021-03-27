@@ -7,12 +7,12 @@ artifacts:
   type: zip
   secondary-artifacts:
     artifact1:
-      base-directory: $CODEBUILD_SRC_DIR
+      base-directory: $CODEBUILD_SRC_DIR_Source
       files:
         - samTemplate.yaml
         - outputSamTemplate.yaml
     artifact2:
-      base-directory: $CODEBUILD_SRC_DIR_source2
+      base-directory: $CODEBUILD_SRC_DIR_Source2
       files:
         - samTemplate.yaml
         - outputSamTemplate.yaml
