@@ -2,10 +2,10 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
 Description: CD Demo Lambda
 Resources:
-  BasicAWSApiGateway:
+  LoyaltyProgramDetailsApi:
     Type: AWS::Serverless::Api
     Properties:
-      Name: LoyaltyProgramDetailsApi
+      Name: Loyalty Program Details Api
       StageName: Staging
 
   CDDemoLambda:
