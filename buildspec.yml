@@ -6,12 +6,12 @@ phases:
 artifacts:
   type: zip
   secondary-artifacts:
-    artifact1:
+    BuildArtifact:
       base-directory: $CODEBUILD_SRC_DIR_Source
       files:
         - samTemplate.yaml
         - outputSamTemplate.yaml
-    artifact2:
+    BuildArtifact2:
       base-directory: $CODEBUILD_SRC_DIR_Source2
       files:
         - samTemplate.yaml
