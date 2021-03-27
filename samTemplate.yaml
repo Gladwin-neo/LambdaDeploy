@@ -22,7 +22,7 @@ Resources:
         CDDemoApi:
           Type: Api
           Properties:
-            RestApiId: !Ref BasicAWSApiGateway
+            RestApiId: !Ref LoyaltyProgramDetailsApi
             Path: /hello
             Method: GET
   CDDemoLambda2:
