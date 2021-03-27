@@ -5,6 +5,14 @@ phases:
       - aws cloudformation package --template-file samTemplate.yaml --s3-bucket itsacodepipeline --output-template-file outputSamTemplate.yaml
 artifacts:
   type: zip
-  files:
-    - samTemplate.yaml
-    - outputSamTemplate.yaml
+  secondary-artifacts:
+    artifact1:
+      base-directory: $CODEBUILD_SRC_DIR
+      files:
+        - samTemplate.yaml
+        - outputSamTemplate.yaml
+    artifact2:
+      base-directory: $CODEBUILD_SRC_DIR_source2
+      files:
+        - samTemplate.yaml
+        - outputSamTemplate.yaml
